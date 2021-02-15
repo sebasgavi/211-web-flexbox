@@ -1,0 +1,58 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.example {
+  width: 500px;
+  max-width: 100%;
+
+  background-color: darkgrey;
+
+  margin: 0px auto;
+  padding: 20px;
+  position: relative;
+  left: 20px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.absolute {
+  background-color: red;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: darkorchid;
+  /* padding: 20px; */
+  margin: 10px 0px;
+  height: 300px;
+}
+
+.flexbox__item {
+  background-color: orange;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  margin: 10px;
+}
+
+@media (max-width: 400px) {
+  .flexbox__item--important {
+    order: -1;
+  }
+}
