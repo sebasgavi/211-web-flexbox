@@ -34,7 +34,7 @@ html {
 .flexbox {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
 
   background-color: darkorchid;
@@ -48,7 +48,9 @@ html {
   padding: 10px;
   color: white;
   width: 150px;
+  height: 200px;
   margin: 10px;
+  flex-shrink: 1;
 }
 
 @media (max-width: 400px) {
@@ -56,3 +58,50 @@ html {
     order: -1;
   }
 }
+
+
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout__left {
+  width: 15%;
+  background-color: darkkhaki;
+}
+
+.layout__main {
+  width: 70%;
+  background-color: darkolivegreen;
+}
+
+.layout__right {
+  width: 15%;
+  background-color: darksalmon;
+}
+
+
+@media print, (max-width: 500px) {
+  .layout {
+    flex-direction: column;
+  }
+  .layout__left {
+    order: -2;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .layout__right {
+    order: -1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .layout__main {
+    width: 100%;
+  }
+
+  .fixed {
+    display: none;
+  }
+}
+
+
